@@ -1,0 +1,13 @@
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.last_modified_by">
+    <value key="title">Last Modified By</value>
+    <value key="description">The username of the person who last edited the content</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+        <element>plone.app.querystring.operation.string.is</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+</registry>
