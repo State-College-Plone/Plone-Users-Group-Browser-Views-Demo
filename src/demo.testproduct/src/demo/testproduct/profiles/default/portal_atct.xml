@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<atcttool
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ 
+    <topic_metadata i18n:domain="plone">
+
+        <metadata
+            name="last_modified_by"
+            enabled="True"
+            friendlyName="Last Modified By"
+            description="The username of the user who last edited the content."
+            />
+
+    </topic_metadata>
+ </atcttool>
