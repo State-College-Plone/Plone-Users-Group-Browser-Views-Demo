@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="demo.testproduct_various"
+  			   version="2"
+               handler="demo.testproduct.setuphandlers.importVarious"
+               title="demo.testproduct installation bits">
+ </import-step>
+</import-steps>

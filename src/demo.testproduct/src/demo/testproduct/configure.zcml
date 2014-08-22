@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="demo.testproduct">
+
+    <five:registerPackage package="." initialize=".initialize" />
+    <include package="five.grok" />
+    <grok:grok package="." />
+
+    <genericsetup:registerProfile
+      name="default"
+      title="demo.testproduct"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+    <include package=".browser" />
+
+    <adapter name="last_modified_by"
+             factory=".index.get_last_modified_user" />
+
+
+
+<!--
+# The Plone site root
+from Products.CMFCore.interfaces import ISiteRoot
+# Any content with child items
+from Products.CMFCore.interfaces import IFolderish
+# Only "Page" Plone content type
+ -->
+</configure>
