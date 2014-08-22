@@ -3,8 +3,7 @@ from Products.CMFCore.interfaces import IContentish
 from Products.CMFCore.utils import getToolByName
 
 
-@indexer(IContentish)
-def get_last_modified_user(object, **kw):
+def get_last_modified_by_username(object):
     pr = getToolByName(object, "portal_repository")
     history = pr.getHistoryMetadata(object)
     if history:
@@ -15,3 +14,7 @@ def get_last_modified_user(object, **kw):
         return modifier
     return None
 
+
+@indexer(IContentish)
+def get_last_modified_user(object, **kw):
+    return get_last_modified_user(object)
